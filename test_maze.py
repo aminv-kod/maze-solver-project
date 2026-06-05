@@ -29,6 +29,7 @@ class TestMaze(unittest.TestCase):
             maze.find_start(),
             (0, 0)
         )
+
     def test_find_end(self):
         grid = [
             ["S", "."],
@@ -40,6 +41,18 @@ class TestMaze(unittest.TestCase):
         self.assertEqual(
             maze.find_end(),
             (1, 1)
+        )
+
+    def test_wall_detection(self):
+        grid = [
+            ["S", "#"],
+            [".", "E"]
+        ]
+
+        maze = Maze(grid)
+
+        self.assertTrue(
+            maze.is_wall(0, 1)
         )
 
 
