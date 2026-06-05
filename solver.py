@@ -12,6 +12,7 @@ def solve_bfs(maze):
 
     queue = deque([(start, [start])])
     visited = {start}
+    visited_steps = []
 
     directions = [
         (-1, 0),  # up
@@ -24,7 +25,7 @@ def solve_bfs(maze):
         (r, c), path = queue.popleft()
 
         if (r, c) == end:
-            return path
+            return path, visited_steps
 
         for dr, dc in directions:
             nr = r + dr
@@ -37,11 +38,15 @@ def solve_bfs(maze):
                 (nr, nc) not in visited
             ):
                 visited.add((nr, nc))
+
+                visited_steps.append(
+                    visited.copy()
+                )
                 queue.append(
                     ((nr, nc), path + [(nr, nc)])
                 )
 
-    return None
+    return None, visited_steps
 def solve_dfs(maze):
 
     rows = len(maze)
@@ -54,6 +59,7 @@ def solve_dfs(maze):
 
     stack = [(start, [start])]
     visited = {start}
+    visited_steps = []
 
     directions = [
         (-1, 0),  # up
@@ -67,7 +73,7 @@ def solve_dfs(maze):
         (r, c), path = stack.pop()
 
         if (r, c) == end:
-            return path
+            return path, visited_steps
 
         for dr, dc in directions:
 
@@ -81,8 +87,11 @@ def solve_dfs(maze):
                 (nr, nc) not in visited
             ):
                 visited.add((nr, nc))
+                visited_steps.append(
+                    visited.copy()
+                )
                 stack.append(
                     ((nr, nc), path + [(nr, nc)])
                 )
 
-    return None
+    return None, visited_steps
