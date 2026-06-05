@@ -1,18 +1,14 @@
 from collections import deque
+from maze import Maze
 
 def solve_bfs(maze):
     rows = len(maze)
     cols = len(maze[0])
 
-    start = None
-    end = None
+    maze_obj = Maze(maze)
 
-    for r in range(rows):
-        for c in range(cols):
-            if maze[r][c] == "S":
-                start = (r, c)
-            elif maze[r][c] == "E":
-                end = (r, c)
+    start = maze_obj.find_start()
+    end = maze_obj.find_exit()
 
     queue = deque([(start, [start])])
     visited = {start}
@@ -51,15 +47,10 @@ def solve_dfs(maze):
     rows = len(maze)
     cols = len(maze[0])
 
-    start = None
-    end = None
+    maze_obj = Maze(maze)
 
-    for r in range(rows):
-        for c in range(cols):
-            if maze[r][c] == "S":
-                start = (r, c)
-            elif maze[r][c] == "E":
-                end = (r, c)
+    start = maze_obj.find_start()
+    end = maze_obj.find_exit()
 
     stack = [(start, [start])]
     visited = {start}
