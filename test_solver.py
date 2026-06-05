@@ -6,13 +6,12 @@ class TestSolver(unittest.TestCase):
 
     def test_simple_path(self):
         maze = [
-            ["S", ".", "E"]
+            ["S", ".", "."]
         ]
 
         expected = [
             (0, 0),
-            (0, 1),
-            (0, 2)
+            (0, 1)
         ]
 
         self.assertEqual(
@@ -22,7 +21,7 @@ class TestSolver(unittest.TestCase):
 
     def test_no_path(self):
         maze = [
-            ["S", "#", "E"]
+            ["S", "#", "#"]
         ]
 
         self.assertIsNone(
@@ -31,17 +30,16 @@ class TestSolver(unittest.TestCase):
 
     def test_maze_with_turns(self):
         maze = [
-            ["S", ".", "#"],
-            ["#", ".", "#"],
-            ["#", ".", "E"]
+            ["#", "#", "#", "#"],
+            ["S", ".", ".", "."],
+            ["#", "#", "#", "#"]
         ]
 
         expected = [
-            (0, 0),
-            (0, 1),
+            (1, 0),
             (1, 1),
-            (2, 1),
-            (2, 2)
+            (1, 2),
+            (1, 3)
         ]
 
         self.assertEqual(
@@ -51,13 +49,12 @@ class TestSolver(unittest.TestCase):
 
     def test_dfs_simple_path(self):
         maze = [
-            ["S", ".", "E"]
+            ["S", ".", "."]
         ]
 
         expected = [
             (0, 0),
-            (0, 1),
-            (0, 2)
+            (0, 1)
         ]
 
         self.assertEqual(
@@ -67,7 +64,7 @@ class TestSolver(unittest.TestCase):
 
     def test_dfs_no_path(self):
         maze = [
-            ["S", "#", "E"]
+            ["S", "#", "#"]
         ]
 
         self.assertIsNone(

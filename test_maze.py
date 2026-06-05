@@ -67,7 +67,20 @@ class TestMaze(unittest.TestCase):
             maze.get_neighbors(0, 0),
             [(0, 1), (1, 0)]
         )
+    
+    def test_find_exit(self):
+        grid = [
+            ["#", "#", "#", "#"],
+            ["S", ".", ".", "."],
+            ["#", "#", "#", "#"]
+        ]
 
+        maze = Maze(grid)
+
+        self.assertEqual(
+            maze.find_exit(),
+            (1, 3)
+        )
 
 if __name__ == "__main__":
     unittest.main()

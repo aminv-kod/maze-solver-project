@@ -14,6 +14,30 @@ class Maze:
             for col in range(len(self.grid[row])):
                 if self.grid[row][col] == "E":
                     return (row, col)
+                
+    def find_exit(self):
+
+        rows = len(self.grid)
+        cols = len(self.grid[0])
+
+        for row in range(rows):
+            for col in range(cols):
+
+                is_border = (
+                    row == 0 or
+                    row == rows - 1 or
+                    col == 0 or
+                    col == cols - 1
+                )
+
+                if (
+                    is_border and
+                    self.grid[row][col] != "#" and
+                    self.grid[row][col] != "S"
+                ):
+                    return (row, col)
+
+        return None
 
     def is_wall(self, row, col):
         return self.grid[row][col] == "#"
