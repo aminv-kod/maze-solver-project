@@ -1,11 +1,8 @@
 from solver import solve_bfs
 from renderer import print_maze, visualize_path
+from loader import load_maze
 
-maze = [
-    ["S", ".", "."],
-    ["#", "#", "."],
-    [".", ".", "E"]
-]
+maze = load_maze("maze.txt")
 
 print("Original maze:")
 print_maze(maze)
