@@ -14,3 +14,6 @@ class Maze:
             for col in range(len(self.grid[row])):
                 if self.grid[row][col] == "E":
                     return (row, col)
+
+    def is_wall(self, row, col):
+        return self.grid[row][col] == "#"
