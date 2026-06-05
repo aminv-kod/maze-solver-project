@@ -29,6 +29,18 @@ class TestMaze(unittest.TestCase):
             maze.find_start(),
             (0, 0)
         )
+    def test_find_end(self):
+        grid = [
+            ["S", "."],
+            [".", "E"]
+        ]
+
+        maze = Maze(grid)
+
+        self.assertEqual(
+            maze.find_end(),
+            (1, 1)
+        )
 
 
 if __name__ == "__main__":
