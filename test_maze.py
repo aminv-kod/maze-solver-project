@@ -55,6 +55,19 @@ class TestMaze(unittest.TestCase):
             maze.is_wall(0, 1)
         )
 
+    def test_get_neighbors(self):
+        grid = [
+            ["S", "."],
+            [".", "E"]
+        ]
+
+        maze = Maze(grid)
+
+        self.assertCountEqual(
+            maze.get_neighbors(0, 0),
+            [(0, 1), (1, 0)]
+        )
+
 
 if __name__ == "__main__":
     unittest.main()
