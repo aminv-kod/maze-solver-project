@@ -177,8 +177,10 @@ python -m unittest test_solver.py
 
 ---
 
-## Author
+## Authors
 
 Shaxboz Aminov
+Shokhrukh Orzuyev
 
 GitHub: https://github.com/aminv-kod
+GitHub: https://github.com/wenzo-siut
