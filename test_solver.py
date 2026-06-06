@@ -15,7 +15,7 @@ class TestSolver(unittest.TestCase):
         ]
 
         self.assertEqual(
-            solve_bfs(maze),
+            solve_bfs(maze)[0],
             expected
         )
 
@@ -25,7 +25,7 @@ class TestSolver(unittest.TestCase):
         ]
 
         self.assertIsNone(
-            solve_bfs(maze)
+            solve_bfs(maze)[0]
         )
 
     def test_maze_with_turns(self):
@@ -43,7 +43,7 @@ class TestSolver(unittest.TestCase):
         ]
 
         self.assertEqual(
-            solve_bfs(maze),
+            solve_bfs(maze)[0],
             expected
         )
 
@@ -58,7 +58,7 @@ class TestSolver(unittest.TestCase):
         ]
 
         self.assertEqual(
-            solve_dfs(maze),
+            solve_dfs(maze)[0],
             expected
         )
 
@@ -68,7 +68,7 @@ class TestSolver(unittest.TestCase):
         ]
 
         self.assertIsNone(
-            solve_dfs(maze)
+            solve_dfs(maze)[0]
         )
 
 
