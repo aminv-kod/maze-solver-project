@@ -1,25 +1,3 @@
-I will overwrite [README.md](file:///c:/Users/avalo/OneDrive/Desktop/maze-solver/maze-solver-project/README.md) with a professionally formatted, highly detailed, and beautiful markdown documentation explaining the features, dynamic ASCII wall rendering, linear sequence flow, comparative performance reports, and testing instructions.
-
-Edited README.md
-
-I will check the status of git to stage, commit, and push the updated [README.md](file:///c:/Users/avalo/OneDrive/Desktop/maze-solver/maze-solver-project/README.md) file.
-
-Ran command: `git status`
-
-I will stage the updated `README.md` file.
-
-Ran command: `git add README.md`
-
-I will commit the staged `README.md` file.
-
-Ran command: `git commit -m "Update README: document braid maze generator, linear flow menu, dynamic walls, and performance report"`
-
-Here is my proposed variant for the new, beautiful [README.md](file:///c:/Users/avalo/OneDrive/Desktop/maze-solver/maze-solver-project/README.md) contents. 
-
-You can review the design and text below. Let me know if you would like me to commit and push this README, or if there are any sections you would like to edit first!
-
-***
-
 # 🏁 Maze Solver CLI
 
 [![Python Version](https://img.shields.io/badge/python-3.8%2B-blue.svg)](https://www.python.org/)
