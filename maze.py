@@ -16,7 +16,12 @@ class Maze:
                     return (row, col)
                 
     def find_exit(self):
+        # Prioritize finding explicit exit symbol 'E'
+        end_pos = self.find_end()
+        if end_pos is not None:
+            return end_pos
 
+        # Fallback to finding the first border opening that is not a wall or start
         rows = len(self.grid)
         cols = len(self.grid[0])
 

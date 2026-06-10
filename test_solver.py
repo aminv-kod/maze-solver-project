@@ -71,6 +71,29 @@ class TestSolver(unittest.TestCase):
             solve_dfs(maze)[0]
         )
 
+    def test_visited_steps_format(self):
+        maze = [
+            ["S", ".", "."],
+            ["#", "#", "E"]
+        ]
+        path, visited, _ = solve_bfs(maze)
+        self.assertIsInstance(visited, list)
+        if visited:
+            self.assertIsInstance(visited[0], tuple)
+            self.assertEqual(len(visited[0]), 2)
+
+    def test_bfs_vs_dfs_path_length(self):
+        maze = [
+            ["S", ".", ".", "."],
+            [".", "#", "#", "."],
+            [".", ".", ".", "E"]
+        ]
+        bfs_path, _, _ = solve_bfs(maze)
+        dfs_path, _, _ = solve_dfs(maze)
+        self.assertIsNotNone(bfs_path)
+        self.assertIsNotNone(dfs_path)
+        self.assertTrue(len(bfs_path) <= len(dfs_path))
+
 
 if __name__ == "__main__":
     unittest.main()
