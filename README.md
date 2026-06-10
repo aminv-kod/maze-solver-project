@@ -133,4 +133,4 @@ The application is structured into modular components:
 ## 📝 Authors
 
 - **Shaxboz Aminov** - [aminv-kod](https://github.com/aminv-kod)
-- **Shokhrukh Orzuyev** - [wenzo-siut](https://github.com/deucalion-os)
+- **Shokhrukh Orzuyev** - [deucalion-os](https://github.com/deucalion-os)
