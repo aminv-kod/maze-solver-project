@@ -183,4 +183,4 @@ Shaxboz Aminov
 Shokhrukh Orzuyev
 
 GitHub: https://github.com/aminv-kod
-GitHub: https://github.com/wenzo-siut
+GitHub: https://github.com/deucalion-os
